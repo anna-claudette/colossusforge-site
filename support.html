@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support — Colossus Forge Studios</title>
+  <meta name="description" content="Get help with Colossus Forge Studios products. Contact support for Portrait Forge, NOAA Weather, PromptGrader, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="logo">Colossus Forge Studios</a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/#products">Products</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="support-page">
+    <div class="container">
+      <h1>Support</h1>
+      <p class="support-intro">Having an issue or need help with one of our products? Fill out the form below or email us directly.</p>
+
+      <div class="support-grid">
+        <div class="support-form-wrap">
+          <form id="support-form" action="#" method="POST">
+            <label for="sf-product">Product</label>
+            <select id="sf-product" name="product" required>
+              <option value="" disabled selected>Select a product</option>
+              <option value="portrait-forge">Portrait Forge</option>
+              <option value="noaa-weather">NOAA Weather</option>
+              <option value="forge-the-kingdom">Forge the Kingdom</option>
+              <option value="promptgrader">PromptGrader</option>
+              <option value="tripforge">TripForge</option>
+              <option value="voice-agent">Voice Agent Auditioner</option>
+              <option value="protect-the-forge">Protect the Forge</option>
+              <option value="precursor">Precursor</option>
+              <option value="other">Other / General</option>
+            </select>
+
+            <label for="sf-type">Issue type</label>
+            <select id="sf-type" name="type" required>
+              <option value="" disabled selected>What do you need help with?</option>
+              <option value="bug">Bug report</option>
+              <option value="billing">Billing or payment issue</option>
+              <option value="feature">Feature request</option>
+              <option value="account">Account or access issue</option>
+              <option value="question">General question</option>
+            </select>
+
+            <label for="sf-email">Your email</label>
+            <input type="email" id="sf-email" name="email" placeholder="you@example.com" required autocomplete="email">
+
+            <label for="sf-message">Describe the issue</label>
+            <textarea id="sf-message" name="message" rows="6" placeholder="What happened? What did you expect? Include any error messages you saw." required minlength="20" maxlength="2000"></textarea>
+
+            <!-- Honeypot — hidden from real users, bots fill it -->
+            <div class="hp-field" aria-hidden="true">
+              <label for="sf-website">Website</label>
+              <input type="text" id="sf-website" name="website" tabindex="-1" autocomplete="off">
+            </div>
+
+            <!-- Timestamp — bots submit instantly -->
+            <input type="hidden" id="sf-ts" name="timestamp" value="">
+
+            <div class="form-footer">
+              <span id="sf-chars" class="char-count"></span>
+              <button type="submit" class="btn" id="sf-submit">Send Message</button>
+            </div>
+
+            <div id="sf-status" class="form-status" role="alert"></div>
+          </form>
+        </div>
+
+        <div class="support-sidebar">
+          <div class="sidebar-card">
+            <h3>Email us directly</h3>
+            <p>For billing, privacy, or urgent issues:</p>
+            <a href="mailto:colossusforge@pm.me" class="sidebar-email">colossusforge@pm.me</a>
+          </div>
+
+          <div class="sidebar-card">
+            <h3>Response time</h3>
+            <p>We typically respond within 24&ndash;48 hours. Billing issues are prioritized.</p>
+          </div>
+
+          <div class="sidebar-card">
+            <h3>Before you write</h3>
+            <ul>
+              <li>Try clearing your browser cache / app data</li>
+              <li>Check that your browser or app is up to date</li>
+              <li>Include the device and browser you're using</li>
+              <li>Screenshots help us fix things faster</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Colossus Forge Studios, a division of Colossus Forge LLC. All rights reserved.</p>
+      <p><a href="/privacy">Privacy Policy</a> &middot; <a href="/support">Support</a> &middot; <a href="mailto:colossusforge@pm.me">colossusforge@pm.me</a> &middot; Kingston, NH</p>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      // Record load timestamp for bot detection
+      var loadTime = Date.now();
+      document.getElementById('sf-ts').value = loadTime.toString();
+
+      // Character counter
+      var msg = document.getElementById('sf-message');
+      var chars = document.getElementById('sf-chars');
+      function updateCount() {
+        var len = msg.value.length;
+        chars.textContent = len + ' / 2000';
+        chars.style.color = len > 1800 ? '#ef4444' : '';
+      }
+      msg.addEventListener('input', updateCount);
+      updateCount();
+
+      // Form submission
+      document.getElementById('support-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        var status = document.getElementById('sf-status');
+        var submit = document.getElementById('sf-submit');
+
+        // Anti-spam: honeypot check
+        if (document.getElementById('sf-website').value !== '') {
+          status.textContent = 'Message sent! We\'ll get back to you soon.';
+          status.className = 'form-status success';
+          return;
+        }
+
+        // Anti-spam: too-fast check (< 3 seconds = bot)
+        var elapsed = Date.now() - loadTime;
+        if (elapsed < 3000) {
+          status.textContent = 'Message sent! We\'ll get back to you soon.';
+          status.className = 'form-status success';
+          return;
+        }
+
+        // Collect form data
+        var product = document.getElementById('sf-product').value;
+        var type = document.getElementById('sf-type').value;
+        var email = document.getElementById('sf-email').value;
+        var message = msg.value;
+
+        // Build mailto link as fallback (no backend needed)
+        var subject = encodeURIComponent('[' + product + '] ' + type + ' — Support Request');
+        var body = encodeURIComponent(
+          'Product: ' + product + '\n' +
+          'Issue type: ' + type + '\n' +
+          'From: ' + email + '\n\n' +
+          message
+        );
+
+        submit.disabled = true;
+        submit.textContent = 'Sending...';
+
+        // Open mailto (works everywhere, no backend dependency)
+        window.location.href = 'mailto:colossusforge@pm.me?subject=' + subject + '&body=' + body;
+
+        // Show success state
+        setTimeout(function() {
+          status.textContent = 'Your email client should have opened. If not, email us directly at colossusforge@pm.me';
+          status.className = 'form-status success';
+          submit.disabled = false;
+          submit.textContent = 'Send Message';
+        }, 1000);
+      });
+    })();
+  </script>
+
+</body>
+</html>
