@@ -499,3 +499,18 @@ footer a:hover { color: var(--accent); }
   .site-header nav { gap: 16px; }
   .site-header nav a { font-size: 0.82rem; }
 }
+
+/* === Nav CTA Button === */
+.site-header nav a.nav-cta {
+  color: #fff;
+  background: var(--accent);
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.2s;
+}
+.site-header nav a.nav-cta:hover {
+  background: #5a52e0;
+  transform: translateY(-1px);
+  text-decoration: none;
+}
