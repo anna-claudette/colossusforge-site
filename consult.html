@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Consultation — Colossus Forge Studios</title>
+  <meta name="description" content="Book a free consultation with Colossus Forge Studios. Custom AI agents, apps, and creative tools built for your business.">
+  <meta property="og:title" content="Book a Consultation — Colossus Forge Studios">
+  <meta property="og:description" content="Custom AI agents built for your business. Book a free consultation.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .consult-hero {
+      padding: 100px 0 60px;
+      text-align: center;
+    }
+    .consult-hero h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 16px;
+    }
+    .consult-hero .subtitle {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto 48px;
+    }
+    .links-hub {
+      max-width: 520px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .link-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 24px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: all 0.2s ease;
+      text-decoration: none;
+      color: var(--text);
+    }
+    .link-card:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(108, 99, 255, 0.1);
+      text-decoration: none;
+    }
+    .link-card .link-icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+      width: 40px;
+      text-align: center;
+    }
+    .link-card .link-content { flex: 1; }
+    .link-card .link-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 1.05rem;
+      margin-bottom: 2px;
+    }
+    .link-card .link-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    .link-card .link-arrow {
+      color: var(--text-muted);
+      font-size: 1.2rem;
+      transition: color 0.2s, transform 0.2s;
+    }
+    .link-card:hover .link-arrow {
+      color: var(--accent);
+      transform: translateX(4px);
+    }
+    .link-card.featured {
+      background: linear-gradient(135deg, rgba(108, 99, 255, 0.12), rgba(108, 99, 255, 0.04));
+      border-color: rgba(108, 99, 255, 0.3);
+    }
+    .link-card.featured:hover {
+      border-color: var(--accent);
+      box-shadow: 0 8px 32px rgba(108, 99, 255, 0.2);
+    }
+    .links-divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 8px 0;
+    }
+    .links-divider span {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+    .links-divider::before,
+    .links-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+    .consult-footer {
+      text-align: center;
+      padding: 40px 24px;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+    .consult-footer a { color: var(--text-muted); }
+    .consult-footer a:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="logo">Colossus Forge Studios</a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/#products">Products</a>
+        <a href="/support">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="consult-hero">
+    <div class="container">
+      <h1>Let's Build Something.</h1>
+      <p class="subtitle">Custom AI agents, apps, and creative tools — built for your business, your workflow, your vision.</p>
+    </div>
+  </section>
+
+  <div class="links-hub">
+
+    <a href="https://calendly.com/REPLACE_WITH_YOUR_LINK" class="link-card featured" target="_blank" rel="noopener">
+      <span class="link-icon">📅</span>
+      <div class="link-content">
+        <div class="link-title">Book a Free Consultation</div>
+        <div class="link-desc">30 minutes to talk about what you need and how we can help.</div>
+      </div>
+      <span class="link-arrow">→</span>
+    </a>
+
+    <div class="links-divider"><span>Connect</span></div>
+
+    <a href="mailto:jeffrey@colossusforge.com" class="link-card">
+      <span class="link-icon">✉️</span>
+      <div class="link-content">
+        <div class="link-title">Email</div>
+        <div class="link-desc">jeffrey@colossusforge.com</div>
+      </div>
+      <span class="link-arrow">→</span>
+    </a>
+
+    <a href="https://colossusforge.com" class="link-card">
+      <span class="link-icon">🏠</span>
+      <div class="link-content">
+        <div class="link-title">Colossus Forge Studios</div>
+        <div class="link-desc">Apps, games, and creative tools.</div>
+      </div>
+      <span class="link-arrow">→</span>
+    </a>
+
+    <!--
+    === ADD NEW LINKS HERE ===
+    Copy this template:
+
+    <a href="YOUR_URL" class="link-card" target="_blank" rel="noopener">
+      <span class="link-icon">🔗</span>
+      <div class="link-content">
+        <div class="link-title">Link Title</div>
+        <div class="link-desc">Short description.</div>
+      </div>
+      <span class="link-arrow">→</span>
+    </a>
+
+    For section dividers:
+    <div class="links-divider"><span>Section Name</span></div>
+    -->
+
+  </div>
+
+  <footer class="consult-footer">
+    <p>&copy; 2026 Colossus Forge Studios &middot; <a href="/privacy">Privacy</a> &middot; <a href="/terms">Terms</a></p>
+  </footer>
+</body>
+</html>
