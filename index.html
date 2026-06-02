@@ -3,182 +3,311 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Colossus Forge Studios — Apps, Games & Creative Tools</title>
-  <meta name="description" content="Colossus Forge Studios builds apps, games, and creative tools. From AI-powered portrait creators to weather apps and indie games.">
-  <meta property="og:title" content="Colossus Forge Studios — Apps, Games & Creative Tools">
-  <meta property="og:description" content="We build apps, games, and creative tools. From AI portrait creators to indie games.">
+  <title>Colossus Forge Studios · One operator, an AI agent fleet, real software shipped fast</title>
+  <meta name="description" content="Colossus Forge is a one-person studio. One operator directs a fleet of AI agents on owned hardware to design, build, and ship apps, AI tools, and games. Bootstrapped. No tracking.">
+  <meta property="og:title" content="Colossus Forge Studios: one operator, an AI agent fleet, real software shipped fast">
+  <meta property="og:description" content="One person directing a fleet of AI agents to ship apps, AI tools, and games across categories. Bootstrapped, privacy-first, on owned hardware.">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="https://colossusforge.com/assets/precursor-duel.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header class="site-header">
     <div class="container">
-      <a href="/" class="logo">Colossus Forge Studios</a>
+      <a href="/" class="logo">Colossus Forge</a>
       <nav>
-        <a href="#products">Products</a>
-        <a href="#about">About</a>
-        <a href="/support">Support</a>
+        <a href="#products" class="products-link">What shipped</a>
+        <a href="#operating-model" class="os-link">How it's built</a>
         <a href="#contact">Contact</a>
         <a href="/consult" class="nav-cta">Book a Consult</a>
       </nav>
     </div>
   </header>
 
+  <!-- HERO -->
   <section class="hero">
     <div class="container">
-      <h1>We build apps, games &amp; creative tools.</h1>
-      <p class="hero-sub">An independent studio creating software for players, creators, and curious people.</p>
-      <a href="#products" class="btn">See Our Products</a>
+      <p class="eyebrow">Independent software studio · Kingston, NH</p>
+      <h1>One person. A fleet of AI agents. Real software, <span class="hl">shipped fast.</span></h1>
+      <p class="hero-sub">Colossus Forge is a one-person studio. I direct a fleet of AI agents, running on hardware I own, to design, build, and ship apps, AI tools, and games. Bootstrapped. No VC. No tracking.</p>
+      <div class="cta-row">
+        <a href="#products" class="btn">See what shipped</a>
+        <a href="#operating-model" class="btn-ghost">How it's built</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="num">1</span><span class="lbl">operator, Kingston NH</span></div>
+        <div class="stat"><span class="num">Fleet</span><span class="lbl">AI agents on owned hardware</span></div>
+        <div class="stat"><span class="num">4</span><span class="lbl">categories: tools, apps, games, platform</span></div>
+        <div class="stat"><span class="num">0</span><span class="lbl">trackers, analytics SDKs, cookies</span></div>
+      </div>
     </div>
   </section>
 
+  <!-- PROOF / RECEIPT -->
+  <section class="proof">
+    <div class="container">
+      <p class="eyebrow">Build velocity</p>
+      <div class="receipt">
+        <div class="receipt-head">
+          <h3>ClubUp Access</h3>
+          <span class="where">Live-events platform</span>
+        </div>
+        <div class="receipt-cols">
+          <div class="receipt-col estimate">
+            <p class="receipt-tag">Contractor estimate (recalled)</p>
+            <div class="figure">4 months / $50k</div>
+            <p class="figure-sub">What an agency scoped the build at.</p>
+          </div>
+          <div class="receipt-col actual">
+            <p class="receipt-tag">Built and shipped</p>
+            <div class="figure">3 days</div>
+            <p class="figure-sub">One operator, directing AI agents.</p>
+          </div>
+        </div>
+        <div class="receipt-foot">
+          <p class="receipt-claim">Three days from empty repo to a working, deployed product. The quote was months.</p>
+          <a href="https://clubup-access.vercel.app" class="btn-ghost" target="_blank" rel="noopener">Open the demo</a>
+        </div>
+      </div>
+      <p class="receipt-note">Phase 1 demo: real flows, sample event data. Accounts and payments are the next phase. The estimate above is a recollection of a verbal quote, not a published figure. The link is live, check it yourself.</p>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
   <section id="products" class="products">
     <div class="container">
-      <h2>Products</h2>
-      <div class="product-grid">
-
-        <div class="product-card">
-          <div class="card-badge live">Live</div>
-          <div class="card-icon">🎨</div>
-          <h3>Portrait Forge</h3>
-          <p class="card-tagline">AI-Powered Character Portrait Creator</p>
-          <p>Customize fantasy character traits — appearance, art style, background — and get a unique AI-generated portrait in seconds. Features the Chaos Slider for styles ranging from royal oil paintings to cosmic delirium.</p>
-          <div class="card-meta">
-            <span class="tag">Web App</span>
-            <span class="tag">PWA</span>
-            <span class="tag">AI</span>
-          </div>
-          <a href="https://portraitforge.app" class="card-link" target="_blank" rel="noopener">Visit App &rarr;</a>
-        </div>
-
-        <div class="product-card">
-          <div class="card-badge live">Live</div>
-          <div class="card-icon">🌤️</div>
-          <h3>NOAA Weather</h3>
-          <p class="card-tagline">Clean, Free Weather — No Ads, No Accounts</p>
-          <p>A beautiful weather app powered by the official NOAA/National Weather Service API. City search, GPS auto-detect, 7-day forecast, dynamic backgrounds. No API keys required, no tracking, no premium upsells — just weather.</p>
-          <div class="card-meta">
-            <span class="tag">iOS</span>
-            <span class="tag">Android</span>
-            <span class="tag">Desktop</span>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="card-badge live">Live</div>
-          <div class="card-icon">📖</div>
-          <h3>Forge the Kingdom</h3>
-          <p class="card-tagline">A Fantasy Visual Novel / Comedy</p>
-          <p>A story-driven visual novel where a wizard, a golem, and a talking cat attempt to save (or accidentally destroy) a kingdom. Built in Ren'Py with original art, branching dialogue, and the Portrait Forge character creator built in.</p>
-          <div class="card-meta">
-            <span class="tag">PC</span>
-            <span class="tag">Mac</span>
-            <span class="tag">Visual Novel</span>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="card-badge coming-soon">Coming Soon</div>
-          <div class="card-icon">🧠</div>
-          <h3>PromptGrader</h3>
-          <p class="card-tagline">Learn Prompt Engineering Through Play</p>
-          <p>A gamified prompt engineering education tool. Write prompts to solve maze puzzles, code challenges, and logic puzzles. Get graded across six dimensions. Climb the leaderboard. Features a 10-level campaign with roguelike Phase 2 mechanics.</p>
-          <div class="card-meta">
-            <span class="tag">Web App</span>
-            <span class="tag">Education</span>
-            <span class="tag">AI</span>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="card-badge coming-soon">Coming Soon</div>
-          <div class="card-icon">✈️</div>
-          <h3>TripForge</h3>
-          <p class="card-tagline">Your AI Travel Companion</p>
-          <p>A smart travel planning app currently in early development. Forge the perfect trip — more details coming soon.</p>
-          <div class="card-meta">
-            <span class="tag">Mobile</span>
-            <span class="tag">Travel</span>
-            <span class="tag">AI</span>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="card-badge coming-soon">Coming Soon</div>
-          <div class="card-icon">🎙️</div>
-          <h3>Voice Agent Auditioner</h3>
-          <p class="card-tagline">AI Voice Agent Testing & Auditioning</p>
-          <p>Test and audition AI voice agents with real-time speech-to-text and text-to-speech. Multiple agent profiles, session management, and a mobile-friendly web interface for evaluating voice-powered AI assistants.</p>
-          <div class="card-meta">
-            <span class="tag">Web App</span>
-            <span class="tag">AI</span>
-            <span class="tag">Voice</span>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="card-badge in-dev">In Development</div>
-          <div class="card-icon">⚔️</div>
-          <h3>Protect the Forge</h3>
-          <p class="card-tagline">Extraction RTS — Risk Everything, Keep Nothing Safe</p>
-          <p>A 2D top-down extraction RTS set in the Forge the Kingdom universe. Design modular Golem units, escort convoys through hostile territory, and extract resources — but every unit you lose is gone forever.</p>
-          <div class="card-meta">
-            <span class="tag">PC</span>
-            <span class="tag">Mac</span>
-            <span class="tag">Strategy</span>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="card-badge in-dev">In Development</div>
-          <div class="card-icon">🌋</div>
-          <h3>Precursor</h3>
-          <p class="card-tagline">God Game — Black & White Meets Evangelion</p>
-          <p>You are a digital consciousness raising a massive combat Construct on an alien world. Bond with your creation, shape its growth, and face threats that dwarf imagination. Built in Godot 4.6 with cinematic AI-directed cameras.</p>
-          <div class="card-meta">
-            <span class="tag">PC</span>
-            <span class="tag">Godot</span>
-            <span class="tag">God Game</span>
-          </div>
-        </div>
-
+      <div class="section-head">
+        <p class="eyebrow">What shipped</p>
+        <h2>Software across four categories, same operator, same method.</h2>
+        <p>Live products link out. In-development work is labeled honestly. No dead links.</p>
       </div>
+
+      <!-- AI TOOLS -->
+      <div class="product-group">
+        <div class="group-head"><h3>AI Tools</h3><span class="group-note">AI products, built with AI.</span></div>
+        <div class="product-grid">
+
+          <div class="product-card">
+            <div class="card-badge live">Live</div>
+            <div class="card-icon">🎨</div>
+            <h3>Portrait Forge</h3>
+            <p class="card-tagline">AI character-portrait creator</p>
+            <p>Set fantasy character traits, art style, and background, and get a unique AI-generated portrait in seconds. Includes a Chaos Slider that runs from royal oil painting to cosmic delirium.</p>
+            <div class="card-meta"><span class="tag">Web App</span><span class="tag">PWA</span><span class="tag">AI</span></div>
+            <div class="card-foot"><a href="https://portraitforge.app" class="card-link" target="_blank" rel="noopener">Visit app</a></div>
+          </div>
+
+          <div class="product-card">
+            <div class="card-badge in-dev">In Development</div>
+            <div class="card-icon">🧠</div>
+            <h3>PromptGrader</h3>
+            <p class="card-tagline">Learn prompt engineering through play</p>
+            <p>A gamified prompt-engineering tool. Write prompts to solve maze, code, and logic puzzles. Get graded across six dimensions and climb a leaderboard. Ten-level campaign with roguelike Phase 2 mechanics.</p>
+            <div class="card-meta"><span class="tag">Web App</span><span class="tag">Education</span><span class="tag">AI</span></div>
+            <div class="card-foot"><span class="card-status">In development</span></div>
+          </div>
+
+          <div class="product-card">
+            <div class="card-badge in-dev">In Development</div>
+            <div class="card-icon">🎙️</div>
+            <h3>Voice Agent Auditioner</h3>
+            <p class="card-tagline">Test and audition AI voice agents</p>
+            <p>Real-time speech-to-text and text-to-speech for evaluating voice AI. Multiple agent profiles, session management, and a mobile-friendly web interface.</p>
+            <div class="card-meta"><span class="tag">Web App</span><span class="tag">Voice</span><span class="tag">AI</span></div>
+            <div class="card-foot"><span class="card-status">In development</span></div>
+          </div>
+
+          <div class="product-card">
+            <div class="card-badge in-dev">In Development</div>
+            <div class="card-icon">✈️</div>
+            <h3>TripForge</h3>
+            <p class="card-tagline">AI travel companion</p>
+            <p>A travel-planning app in early development. Set the trip, and the planner builds the itinerary. More to come.</p>
+            <div class="card-meta"><span class="tag">Mobile</span><span class="tag">Travel</span><span class="tag">AI</span></div>
+            <div class="card-foot"><span class="card-status">In development</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- APPS -->
+      <div class="product-group">
+        <div class="group-head"><h3>Apps</h3><span class="group-note">Practical software, privacy-first.</span></div>
+        <div class="product-grid">
+
+          <div class="product-card">
+            <div class="card-badge live">Live</div>
+            <div class="card-icon">🌤️</div>
+            <h3>NOAA Weather</h3>
+            <p class="card-tagline">Clean weather, no ads, no accounts</p>
+            <p>Weather on the official NOAA / National Weather Service API. City search, GPS auto-detect, seven-day forecast, dynamic backgrounds. No API keys, no tracking, no upsells.</p>
+            <div class="card-meta"><span class="tag">Web App</span><span class="tag">NOAA API</span><span class="tag">No tracking</span></div>
+            <div class="card-foot"><a href="https://web-seven-iota-90.vercel.app/" class="card-link" target="_blank" rel="noopener">Open app</a></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- GAMES -->
+      <div class="product-group">
+        <div class="group-head"><h3>Games</h3><span class="group-note">The hardest thing the pipeline builds. Same operator, same method.</span></div>
+        <div class="product-grid">
+
+          <div class="product-card">
+            <div class="card-badge live">Live</div>
+            <div class="card-icon">📖</div>
+            <h3>Forge the Kingdom</h3>
+            <p class="card-tagline">Fantasy visual novel, with comedy</p>
+            <p>A story-driven visual novel where a wizard, a golem, and a talking cat try to save, or accidentally destroy, a kingdom. Branching dialogue and original art, with the Portrait Forge character creator built in.</p>
+            <div class="card-meta"><span class="tag">PC</span><span class="tag">Mac</span><span class="tag">Visual Novel</span></div>
+            <div class="card-foot"><a href="https://forgethekingdom.itch.io/forge-the-kingdom" class="card-link" target="_blank" rel="noopener">View on itch.io</a></div>
+          </div>
+
+          <div class="product-card">
+            <div class="card-badge in-dev">In Development</div>
+            <div class="card-icon">⚔️</div>
+            <h3>Protect the Forge</h3>
+            <p class="card-tagline">Extraction RTS</p>
+            <p>A 2D top-down extraction RTS set in the Forge the Kingdom universe. Design modular golem units, escort convoys through hostile ground, and extract resources. Every unit you lose is gone for good.</p>
+            <div class="card-meta"><span class="tag">PC</span><span class="tag">Mac</span><span class="tag">Strategy</span></div>
+            <div class="card-foot"><span class="card-status">In development</span></div>
+          </div>
+
+          <div class="product-card">
+            <div class="card-badge in-dev">In Development</div>
+            <div class="card-media">
+              <picture>
+                <source srcset="/assets/precursor-duel.webp" type="image/webp">
+                <img src="/assets/precursor-duel.jpg" alt="Two colossal Precursor Constructs in a full-body energy duel under an aurora, a planet on the horizon" loading="lazy" width="1200" height="655">
+              </picture>
+              <div class="media-cap">Concept art · Precursor</div>
+            </div>
+            <h3>Precursor</h3>
+            <p class="card-tagline">God game: Black &amp; White meets Evangelion</p>
+            <p>You are a digital consciousness raising a massive combat Construct on an alien world. Bond with your creation, shape its growth, and face threats that dwarf imagination. Built in Godot 4.6 with AI-directed cinematic cameras.</p>
+            <div class="card-meta"><span class="tag">PC</span><span class="tag">Godot 4.6</span><span class="tag">God Game</span></div>
+            <div class="card-foot"><span class="card-status">In development</span></div>
+          </div>
+
+        </div>
+
+        <div class="precursor-gallery product-grid" style="margin-top:20px;">
+          <div class="card-media"><picture><source srcset="/assets/precursor-volcano.webp" type="image/webp"><img src="/assets/precursor-volcano.webp" alt="A Precursor Construct standing in a lava field beneath an erupting volcano" loading="lazy" width="1200" height="655"></picture><div class="media-cap">Concept art · Construct, volcanic field</div></div>
+          <div class="card-media"><picture><source srcset="/assets/precursor-ocean.webp" type="image/webp"><img src="/assets/precursor-ocean.webp" alt="A colossal Precursor structure emerging from the ocean beside a lighthouse at dusk" loading="lazy" width="1200" height="655"></picture><div class="media-cap">Concept art · Emergence</div></div>
+        </div>
+      </div>
+
+      <!-- PLATFORMS -->
+      <div class="product-group">
+        <div class="group-head"><h3>Platforms</h3><span class="group-note">End-to-end products, not just apps.</span></div>
+        <div class="product-grid">
+
+          <div class="product-card">
+            <div class="card-badge demo">Phase 1 demo</div>
+            <div class="card-icon">⛳</div>
+            <h3>ClubUp Access</h3>
+            <p class="card-tagline">Live-events platform</p>
+            <p>A platform for charity golf events: signup, onboarding, and event flows. A contractor scoped it at four months and $50k. Built and shipped a working deployed version in three days by directing AI agents.</p>
+            <div class="card-meta"><span class="tag">Web</span><span class="tag">Events</span><span class="tag">3-day build</span></div>
+            <div class="card-foot"><a href="https://clubup-access.vercel.app" class="card-link" target="_blank" rel="noopener">Open the demo</a></div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
   </section>
 
+  <!-- OPERATING MODEL -->
+  <section id="operating-model" class="os">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">The operating system</p>
+        <h2>How one person ships across four categories.</h2>
+        <p>I am the scheduler. Work routes to a fleet of AI services running on hardware I own, plus specialist roles I invoke per task. Owned hardware: two RTX 3090-class GPUs and a Mac mini. The heavy model serving runs local. Here is the honest split.</p>
+      </div>
+
+      <div class="os-tier">
+        <div class="os-tier-head"><h3>Running on owned hardware</h3><span class="os-tier-tag">persistent services</span></div>
+        <div class="os-grid">
+          <div class="os-row"><div class="os-role">Design + specs</div><div class="os-name">Zoey</div><div class="os-fn">Local model on a dedicated GPU. Design partner, spec author, and keeper of the knowledge base.</div></div>
+          <div class="os-row"><div class="os-role">Code + vision</div><div class="os-name">Jinu</div><div class="os-fn">Local model served by vLLM. Writes code, reads images, and drives engine work.</div></div>
+          <div class="os-row"><div class="os-role">Orchestration</div><div class="os-name">Anna</div><div class="os-fn">Runs on a Mac mini. Coordinates batch work and the knowledge store.</div></div>
+          <div class="os-row"><div class="os-role">Always-on ops</div><div class="os-name">Mira</div><div class="os-fn">Local model on the Mac mini. Health checks and fast triage when something stalls.</div></div>
+          <div class="os-row"><div class="os-role">Daily foreman</div><div class="os-name">Gabe</div><div class="os-fn">Wakes on a schedule. Assembles the daily brief and tracks goals.</div></div>
+          <div class="os-row"><div class="os-role">Knowledge store</div><div class="os-name">Open Brain</div><div class="os-fn">Postgres plus vector search. Every artifact registered, versioned, and searchable.</div></div>
+        </div>
+      </div>
+
+      <div class="os-tier">
+        <div class="os-tier-head"><h3>Specialist roles I invoke per task</h3><span class="os-tier-tag">prompts, not running agents</span></div>
+        <div class="os-grid">
+          <div class="os-row"><div class="os-role">Architecture</div><div class="os-name">Archon</div><div class="os-fn">Structure, interfaces, what bears load.</div></div>
+          <div class="os-row"><div class="os-role">Stress-testing</div><div class="os-name">Dialectic</div><div class="os-fn">Failure scenarios. Strengthens a plan by attacking it.</div></div>
+          <div class="os-row"><div class="os-role">Code</div><div class="os-name">Linus</div><div class="os-fn">Pragmatic implementation, existing codebase first.</div></div>
+          <div class="os-row"><div class="os-role">UX</div><div class="os-name">Maya</div><div class="os-fn">Human-first design and accessibility.</div></div>
+          <div class="os-row"><div class="os-role">Research</div><div class="os-name">Finch</div><div class="os-fn">Primary sources with confidence labels.</div></div>
+          <div class="os-row"><div class="os-role">Narrative</div><div class="os-name">Lyra</div><div class="os-fn">Story, lore, and the feel of a thing.</div></div>
+        </div>
+      </div>
+
+      <div class="os-note"><strong>The honest line:</strong> the named services run on hardware I own. The specialists are roles I put on per task, not autonomous agents. Nothing here runs unsupervised or spends money on its own.</div>
+    </div>
+  </section>
+
+  <!-- METHODOLOGY -->
+  <section id="method" class="method">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Methodology, not magic</p>
+        <h2>The same loop, every time.</h2>
+        <p>Repeatable, not heroic. This is an operating model, not a personality.</p>
+      </div>
+      <div class="method-steps">
+        <div class="method-step"><div class="step-n">01</div><h4>Spec the intent</h4><p>Write the build as a spec: why, what, constraints. The spec is the contract.</p></div>
+        <div class="method-step"><div class="step-n">02</div><h4>Route the work</h4><p>Hand each part to the agent or model that fits: design, code, art, research.</p></div>
+        <div class="method-step"><div class="step-n">03</div><h4>Verify</h4><p>Check output against the spec. Load it, test it, read it. No false greens.</p></div>
+        <div class="method-step"><div class="step-n">04</div><h4>Ship</h4><p>Deploy, then record what shipped and what did not.</p></div>
+      </div>
+      <p class="method-map"><strong>Map it to your portfolio:</strong> the same loop runs inside a company. One operator plus a fleet turns a multi-month roadmap into weeks. That is the engagement.</p>
+    </div>
+  </section>
+
+  <!-- ABOUT / ETHOS -->
   <section id="about" class="about">
     <div class="container">
-      <h2>About Colossus Forge Studios</h2>
-      <p>Colossus Forge Studios is an independent software studio building apps, games, and creative tools. We make things for players, creators, and people who like well-crafted software.</p>
-      <p>Our products range from AI-powered creative tools to indie games to practical everyday apps. Everything we ship is built with care — clean design, honest pricing, no dark patterns, and respect for your privacy.</p>
+      <h2>How the studio operates</h2>
+      <p>Bootstrapped and independent. Revenue and owned hardware, not venture funding. Every product is built with care: clean design, honest pricing, no dark patterns, and respect for your privacy.</p>
       <div class="values">
-        <div class="value">
-          <strong>Privacy First</strong>
-          <span>No tracking. No analytics SDKs. No selling your data.</span>
-        </div>
-        <div class="value">
-          <strong>Honest Pricing</strong>
-          <span>Free tiers that actually work. Paid tiers that are worth it. No surprise subscriptions.</span>
-        </div>
-        <div class="value">
-          <strong>Small & Independent</strong>
-          <span>No VC funding, no growth hacking, no dark patterns. Just good software.</span>
-        </div>
+        <div class="value"><strong>Privacy first</strong><span>No analytics SDKs. No trackers. No cookies. Open your browser network tab and check.</span></div>
+        <div class="value"><strong>Bootstrapped</strong><span>No VC. No growth hacking. Revenue plus hardware I own.</span></div>
+        <div class="value"><strong>Honest by default</strong><span>Real status on every product. No dead links. No dark patterns.</span></div>
+        <div class="value"><strong>Built to last</strong><span>This site is static HTML on a CDN. No framework, no tracking, on purpose.</span></div>
       </div>
     </div>
   </section>
 
+  <!-- CONSULT CTA -->
+  <section class="cta-band">
+    <div class="container">
+      <div>
+        <h2>Want this operating model in your company?</h2>
+        <p>I consult on AI adoption: how to wire one operator plus an agent fleet into real throughput.</p>
+      </div>
+      <a href="/consult" class="btn">Book a Consult</a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
   <section id="contact" class="contact">
     <div class="container">
       <h2>Contact</h2>
-      <p>Questions, support, or just want to say hi?</p>
+      <p>Questions, support, or a consulting inquiry.</p>
       <ul class="contact-list">
         <li><strong>Email:</strong> <a href="mailto:colossusforge@pm.me">colossusforge@pm.me</a></li>
+        <li><strong>Consulting:</strong> <a href="/consult">Book a consult</a></li>
         <li><strong>YouTube:</strong> <a href="https://www.youtube.com/channel/UCAP2B44rW3WvW3IFCosan0w" target="_blank" rel="noopener">@ColossusForgeStudios</a></li>
         <li><strong>GitHub:</strong> <a href="https://github.com/anna-claudette" target="_blank" rel="noopener">anna-claudette</a></li>
       </ul>
@@ -188,7 +317,7 @@
   <footer>
     <div class="container">
       <p>&copy; 2026 Colossus Forge Studios, a division of Colossus Forge LLC. All rights reserved.</p>
-      <p><a href="/privacy">Privacy Policy</a> &middot; <a href="/terms">Terms of Service</a> &middot; <a href="/support">Support</a> &middot; <a href="mailto:colossusforge@pm.me">colossusforge@pm.me</a> &middot; Kingston, NH</p>
+      <p><a href="/privacy">Privacy Policy</a> &middot; <a href="/terms">Terms of Service</a> &middot; <a href="/support">Support</a> &middot; <a href="/consult">Consult</a> &middot; <a href="mailto:colossusforge@pm.me">colossusforge@pm.me</a> &middot; Kingston, NH</p>
     </div>
   </footer>
 
